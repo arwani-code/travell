@@ -38,8 +38,13 @@
             value=""
             placeholder="First Name"
           />
-          <input type="text" class="input lastName" placeholder="Last Name" />
-          <input type="text" class="input phone" placeholder="Phone" />
+          <input
+            type="text"
+            value=""
+            class="input lastName"
+            placeholder="Last Name"
+          />
+          <input type="text" value="" class="input phone" placeholder="Phone" />
           <input
             type="text"
             value=""
@@ -62,26 +67,13 @@
           <h2>Successful Message Input</h2>
         </div>
         <div class="modal-body">
-          <h1><span class="detail-click"></span> Thank You Very Much 💗💗</h1>
+          <h1>
+            <span class="first-value"></span>
+            <span class="last-value"></span> Thank You Very Much 💗💗
+          </h1>
         </div>
       </div>
     </div>
-    <script>
-      const modal = document.getElementById('simpleModal')
-      const closeModal = document.querySelector('.closeBtn')
-      const btn = document.querySelector('.btn')
-      let firstName = document.querySelector('.firstName')
-
-      btn.addEventListener('click', () => {
-        let detailClick = document.querySelector('.detail-click')
-        let nameValue = firstName.value
-        detailClick.innerHTML = nameValue
-        modal.style.display = 'block'
-      })
-
-      closeModal.addEventListener('click', () => {
-        modal.style.display = 'none'
-      })
-    </script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
