@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insight Vacations | Welcome</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body
+    style="
+      background: url('https://i.imgur.com/kk76J5I.jpg') no-repeat top center;
+    "
+  >
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Insight</span> Vacations</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="current"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="title">
+        <h1>contact us form</h1>
+      </div>
+      <form class="contact-form">
+        <div class="input-fields">
+          <input
+            type="text"
+            class="input firstName"
+            value=""
+            placeholder="First Name"
+          />
+          <input type="text" class="input lastName" placeholder="Last Name" />
+          <input type="text" class="input phone" placeholder="Phone" />
+          <input
+            type="text"
+            value=""
+            class="input email"
+            placeholder="Email Address"
+          />
+        </div>
+        <div class="msg">
+          <textarea placeholder="Message"></textarea>
+          <div class="btn">send</div>
+        </div>
+      </form>
+    </div>
+
+    <!-- modal -->
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="closeBtn">&times;</span>
+          <h2>Successful Message Input</h2>
+        </div>
+        <div class="modal-body">
+          <h1><span class="detail-click"></span> Thank You Very Much 💗💗</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      const modal = document.getElementById('simpleModal')
+      const closeModal = document.querySelector('.closeBtn')
+      const btn = document.querySelector('.btn')
+      let firstName = document.querySelector('.firstName')
+
+      btn.addEventListener('click', () => {
+        let detailClick = document.querySelector('.detail-click')
+        let nameValue = firstName.value
+        detailClick.innerHTML = nameValue
+        modal.style.display = 'block'
+      })
+
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none'
+      })
+    </script>
+  </body>
+</html>
