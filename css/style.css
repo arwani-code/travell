@@ -257,7 +257,7 @@ p {
 .modal-content {
   background: #f4f4f4;
   margin: 20% auto;
-  width: 70%;
+  width: 40%;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2), 0 7px 20px rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 2s;
@@ -287,7 +287,7 @@ p {
 }
 
 .modal-body {
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .modal-body .first-value {
@@ -296,6 +296,42 @@ p {
 
 .modal-body .last-value {
   color: #e8491d;
+}
+
+/* about section */
+.about-section {
+  background: url(../img/insigth-vacation.jpg) no-repeat left;
+  background-size: 55%;
+  background-color: #fdfdfd;
+  overflow: hidden;
+}
+
+.inner-container {
+  width: 55%;
+  float: right;
+  background-color: #faf8f8;
+  padding: 100px;
+}
+
+.inner-container h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.text {
+  font-size: 13px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13px;
 }
 
 footer {
@@ -319,5 +355,15 @@ footer {
 @media screen and (min-width: 768px) {
   .card-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-section {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+  .inner-container {
+    width: 100%;
   }
 }
